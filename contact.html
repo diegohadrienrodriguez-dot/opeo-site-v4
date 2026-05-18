@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact — OPEO</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .contact-main{background:#fff;}
+    .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+    .contact-inner h2{font-size:clamp(26px,4vw,44px);margin-bottom:18px;}
+    .contact-inner > div > p{color:var(--gray);font-size:16px;line-height:1.9;margin-bottom:36px;}
+    .offices{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:36px;}
+    .office-card{background:var(--offwhite);border-radius:12px;padding:24px;}
+    .office-flag{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;}
+    .office-card h4{color:var(--navy);font-size:15px;margin-bottom:8px;}
+    .office-card p  {color:var(--gray);font-size:14px;line-height:1.65;}
+    .office-card a  {color:var(--cyan);font-size:14px;display:block;margin-top:6px;}
+    .experts{display:flex;flex-direction:column;gap:16px;}
+    .expert-card{background:var(--offwhite);border-radius:12px;padding:22px;display:flex;align-items:center;gap:18px;border:2px solid transparent;transition:all .25s;}
+    .expert-card:hover{border-color:var(--cyan);}
+    .expert-ava{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy),#1a3d80);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;flex-shrink:0;}
+    .expert-info h4{color:var(--navy);font-size:15px;margin-bottom:2px;}
+    .expert-info .role{color:var(--gray);font-size:12px;margin-bottom:6px;}
+    .expert-info a  {color:var(--cyan);font-size:12px;}
+    /* CTA band */
+    .cta-band{background:var(--navy);padding:80px 0;position:relative;overflow:hidden;}
+    .cta-band::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(29,189,242,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(29,189,242,.04) 1px,transparent 1px);background-size:52px 52px;z-index:0;}
+    .ca1,.ca2,.ca3,.ca4{position:absolute;inset:0;pointer-events:none;}
+    .ca1{background:radial-gradient(ellipse 800px 500px at 50% 10%,rgba(29,189,242,.22) 0%,transparent 55%);opacity:.8;animation:ca1 8s ease-in-out infinite alternate;}
+    .ca2{background:radial-gradient(ellipse 600px 400px at 85% 35%,rgba(3,38,106,.6) 0%,rgba(29,189,242,.12) 40%,transparent 60%);opacity:.6;animation:ca2 6s ease-in-out infinite alternate-reverse;}
+    .ca3{background:radial-gradient(ellipse 700px 450px at 15% 65%,rgba(29,189,242,.15) 0%,transparent 55%);opacity:.5;animation:ca3 10s ease-in-out infinite alternate;}
+    .ca4{background:radial-gradient(ellipse 900px 250px at 60% 90%,rgba(29,100,200,.18) 0%,transparent 55%);opacity:.4;animation:ca4 7s ease-in-out infinite alternate-reverse;}
+    @keyframes ca1{0%{transform:translateX(-80px) translateY(-40px) scale(1);}50%{transform:translateX(40px) translateY(25px) scale(1.15);}100%{transform:translateX(80px) translateY(-20px) scale(.9);}}
+    @keyframes ca2{0%{transform:translateX(60px) translateY(30px) scale(.85);}50%{transform:translateX(-25px) translateY(-15px) scale(1.2);}100%{transform:translateX(-70px) translateY(50px) scale(.95);}}
+    @keyframes ca3{0%{transform:translateX(-40px) translateY(15px) scale(1.1);}50%{transform:translateX(55px) translateY(-30px) scale(.85);}100%{transform:translateX(-15px) translateY(40px) scale(1.05);}}
+    @keyframes ca4{0%{transform:translateX(25px) translateY(-15px) scale(.95);}50%{transform:translateX(-50px) translateY(8px) scale(1.1);}100%{transform:translateX(35px) translateY(-50px) scale(.85);}}
+    .cta-band .container{position:relative;z-index:1;text-align:center;}
+    .cta-band h2{color:#fff;font-size:clamp(26px,4vw,44px);margin-bottom:18px;}
+    .cta-band p {color:rgba(255,255,255,.65);font-size:17px;max-width:600px;margin:0 auto 36px;}
+    .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    @media(max-width:900px){
+      .contact-inner{grid-template-columns:1fr;}
+      .offices{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" onclick="closeMob()">✕</button>
+  <a href="index.html">Accueil</a><a href="a-propos.html">À propos</a>
+  <a href="expertises.html">Expertises</a><a href="secteurs.html">Secteurs</a>
+  <a href="transformation.html">Transformation</a><a href="publications.html">Publications</a>
+  <a href="carrieres.html">Carrières</a><a href="contact.html" class="active">Contact</a>
+</div>
+<nav class="navbar solid">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo-link"><img src="assets/logos/logo-official.svg" class="nav-logo-img" alt="OPEO" /></a>
+    <ul class="nav-links">
+      <li><a href="a-propos.html">À propos</a></li><li class="has-drop"><a href="expertises.html">Expertises <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-drop nav-drop-wide"><div class="drop-grid"><a href="expertise-strategie.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg></div><div><span class="drop-card-title">Stratégie Industrielle</span><span class="drop-card-desc">Réorientation et repositionnement industriel</span></div></a><a href="expertise-digital.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><span class="drop-card-title">Digital &amp; Innovation</span><span class="drop-card-desc">Transformation numérique des opérations</span></div></a><a href="expertise-excellence.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div><span class="drop-card-title">Excellence Opérationnelle</span><span class="drop-card-desc">Lean, performance et amélioration continue</span></div></a><a href="expertise-supply-chain.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><div><span class="drop-card-title">Supply Chain</span><span class="drop-card-desc">Optimisation des flux et résilience</span></div></a><a href="expertise-rd.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v10l-4 5h14l-4-5V3"/><line x1="6" y1="7" x2="18" y2="7"/></svg></div><div><span class="drop-card-title">R&amp;D &amp; Innovation</span><span class="drop-card-desc">Accélération des cycles d'innovation</span></div></a></div></div></li>
+      <li class="has-drop"><a href="secteurs.html">Secteurs <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-drop nav-drop-wide"><div class="drop-grid drop-grid-1"><a href="secteurs.html#luxe" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg></div><div><span class="drop-card-title">Luxe</span></div></a><a href="secteurs.html#process" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v10l-4 5h14l-4-5V3"/><line x1="6" y1="7" x2="18" y2="7"/></svg></div><div><span class="drop-card-title">Industrie de Process</span></div></a><a href="secteurs.html#aero" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><div><span class="drop-card-title">Aéronautique &amp; Défense</span></div></a><a href="secteurs.html#pharma" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><span class="drop-card-title">Pharmaceutique – Santé</span></div></a><a href="secteurs.html#auto" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><span class="drop-card-title">Automobile</span></div></a></div></div></li><li><a href="transformation.html">Transformation</a></li>
+      <li><a href="publications.html">Publications</a></li><li><a href="carrieres.html">Carrières</a></li>
+      <li><a href="contact.html" class="cta-link active">Contact</a></li>
+    </ul>
+    <button class="hamburger" onclick="openMob()"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-grid"></div><div class="page-hero-blob"></div>
+  <div class="container">
+    <div class="page-hero-eyebrow"><div class="page-hero-line"></div><span class="page-hero-tag">Parlons transformation</span></div>
+    <h1>Nous contacter</h1>
+    <p>Vous souhaitez explorer une transformation industrielle ? Nos experts sont disponibles pour échanger sur vos enjeux et construire ensemble la meilleure approche.</p>
+  </div>
+</section>
+
+<section class="contact-main page-pad">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="reveal">
+        <span class="label">Nos bureaux</span>
+        <h2>Deux bureaux, une équipe</h2>
+        <p>OPEO est présent en France et en Suisse pour accompagner ses clients sur le terrain, partout en Europe.</p>
+        <div class="offices">
+          <div class="office-card">
+            <div class="office-flag"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> France</div>
+            <h4>Bureau Paris</h4>
+            <p>23 Boulevard Poissonnière<br>75002 Paris</p>
+            <a href="tel:+33954673850">+33 (0)9 54 67 38 50</a>
+          </div>
+          <div class="office-card">
+            <div class="office-flag"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Suisse</div>
+            <h4>Bureau Morges</h4>
+            <p>Rue des Vignerons 1b<br>1110 Morges</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="https://www.linkedin.com/company/opeo/" target="_blank" class="btn btn-navy">LinkedIn OPEO</a>
+          <a href="https://www.youtube.com/channel/UCHxWDzGkSoEmFhDaU6nbsCg" target="_blank" class="btn btn-outline">YouTube</a>
+        </div>
+      </div>
+      <div class="experts reveal" data-d="1">
+        <p style="font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray);margin-bottom:18px;">Experts à contacter</p>
+        <div class="expert-card">
+          <div class="expert-ava">AT</div>
+          <div class="expert-info">
+            <h4>Alexandre Tissot</h4>
+            <p class="role">Directeur Général · Directeur Exécutif</p>
+            <a href="mailto:alexandre.tissot@opeo.consulting">alexandre.tissot@opeo.consulting</a>
+            <a href="tel:+33785534169" style="color:var(--gray);margin-top:2px;">+33 7 85 53 41 69</a>
+          </div>
+        </div>
+        <div class="expert-card">
+          <div class="expert-ava">AO</div>
+          <div class="expert-info">
+            <h4>Athyna Olympio</h4>
+            <p class="role">Directrice des Ressources Humaines</p>
+            <a href="mailto:athyna.olympio@opeo.consulting">athyna.olympio@opeo.consulting</a>
+          </div>
+        </div>
+        <div class="expert-card">
+          <div class="expert-ava">DM</div>
+          <div class="expert-info">
+            <h4>David Machenaud</h4>
+            <p class="role">Associé · Directeur de Missions</p>
+            <a href="mailto:david.machenaud@opeo.consulting">david.machenaud@opeo.consulting</a>
+          </div>
+        </div>
+        <div class="expert-card">
+          <div class="expert-ava">MV</div>
+          <div class="expert-info">
+            <h4>Michael Valentin</h4>
+            <p class="role">Associé · Directeur de Missions</p>
+            <a href="mailto:michael.valentin@opeo.consulting">michael.valentin@opeo.consulting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="ca1"></div><div class="ca2"></div><div class="ca3"></div><div class="ca4"></div>
+  <div class="container">
+    <div class="reveal">
+      <h2>Prêt à transformer vos opérations ?</h2>
+      <p>Nos experts construisent avec vous l'approche la plus adaptée à vos enjeux industriels — du diagnostic à l'ancrage durable.</p>
+      <div class="cta-btns">
+        <a href="mailto:alexandre.tissot@opeo.consulting" class="btn btn-cyan">Envoyer un email →</a>
+        <a href="transformation.html" class="btn btn-ghost">Découvrir notre approche</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><a href="index.html" class="nav-logo-link"><img src="assets/logos/logo-official.svg" class="nav-logo-img" alt="OPEO" /></a><p>Cabinet de Conseil européen spécialisé dans la transformation des opérations industrielles.</p><div class="footer-socials"><a href="https://www.linkedin.com/company/opeo/" target="_blank" class="soc-link">in</a><a href="https://www.youtube.com/channel/UCHxWDzGkSoEmFhDaU6nbsCg" target="_blank" class="soc-link">▶</a></div></div>
+    <div class="footer-col"><h4>Navigation</h4><ul class="footer-nav"><li><a href="index.html">Accueil</a></li><li class="has-drop"><a href="expertises.html">Expertises <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-drop nav-drop-wide"><div class="drop-grid"><a href="expertise-strategie.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg></div><div><span class="drop-card-title">Stratégie Industrielle</span><span class="drop-card-desc">Réorientation et repositionnement industriel</span></div></a><a href="expertise-digital.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><span class="drop-card-title">Digital &amp; Innovation</span><span class="drop-card-desc">Transformation numérique des opérations</span></div></a><a href="expertise-excellence.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div><span class="drop-card-title">Excellence Opérationnelle</span><span class="drop-card-desc">Lean, performance et amélioration continue</span></div></a><a href="expertise-supply-chain.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><div><span class="drop-card-title">Supply Chain</span><span class="drop-card-desc">Optimisation des flux et résilience</span></div></a><a href="expertise-rd.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v10l-4 5h14l-4-5V3"/><line x1="6" y1="7" x2="18" y2="7"/></svg></div><div><span class="drop-card-title">R&amp;D &amp; Innovation</span><span class="drop-card-desc">Accélération des cycles d'innovation</span></div></a></div></div></li><li class="has-drop"><a href="secteurs.html">Secteurs <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-drop nav-drop-wide"><div class="drop-grid drop-grid-1"><a href="secteurs.html#luxe" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg></div><div><span class="drop-card-title">Luxe</span></div></a><a href="secteurs.html#process" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v10l-4 5h14l-4-5V3"/><line x1="6" y1="7" x2="18" y2="7"/></svg></div><div><span class="drop-card-title">Industrie de Process</span></div></a><a href="secteurs.html#aero" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><div><span class="drop-card-title">Aéronautique &amp; Défense</span></div></a><a href="secteurs.html#pharma" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><span class="drop-card-title">Pharmaceutique – Santé</span></div></a><a href="secteurs.html#auto" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><span class="drop-card-title">Automobile</span></div></a></div></div></li><li><a href="transformation.html">Transformation</a></li></ul></div>
+    <div class="footer-col"><h4>OPEO</h4><ul class="footer-nav"><li><a href="a-propos.html">À propos</a></li><li><a href="carrieres.html">Carrières</a></li><li><a href="publications.html">Publications</a></li></ul></div>
+    <div class="footer-col"><h4>Légal</h4><ul class="footer-nav"><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="https://opeo.consulting" target="_blank">CGV</a></li><li><a href="https://opeo.consulting" target="_blank">Égalité H/F</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>@OPEO 2025 · Conçu et développé en France</p><div class="footer-tagline">Vos Opérations sont <em>Stratégiques</em></div></div>
+</div></footer>
+<script>
+function openMob(){document.getElementById('mobMenu').classList.add('open');}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open');}
+const revObs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');revObs.unobserve(x.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+</script>
+</body></html>
