@@ -7,7 +7,7 @@
   <style>
     /* ── PAGE HERO BACKGROUND PHOTO ── */
     section.page-hero {
-      background: url('assets/images/photo expertise.jpg') center/cover no-repeat !important;
+      background: url('photo expertise.jpg') center/cover no-repeat !important;
     }
     .hero-exp-overlay {
       position:absolute; inset:0; z-index:1;
@@ -247,7 +247,9 @@
       color:var(--navy);
       flex:1;
       transition:color .2s;
+      text-decoration:none;
     }
+    a.es-service-name:hover { color:var(--cyan); }
     .es-service:hover .es-service-name { color:var(--cyan); }
     .es-link {
       display:inline-flex;
@@ -304,7 +306,7 @@
 </div>
 <nav class="navbar solid" id="navbar">
   <div class="container"><div class="nav-inner">
-    <a href="index.html" class="nav-logo-link"><img src="assets/logos/logo-official.svg" class="nav-logo-img" alt="OPEO"/></a>
+    <a href="index.html" class="nav-logo-link"><img src="logo-official.svg" class="nav-logo-img" alt="OPEO"/></a>
     <ul class="nav-links">
       <li><a href="a-propos.html">À propos</a></li>
       <li class="has-drop"><a href="expertises.html" class="active">Expertises <svg class="drop-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a><div class="nav-drop nav-drop-wide"><div class="drop-grid"><a href="expertise-strategie.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg></div><div><span class="drop-card-title">Stratégie Industrielle</span><span class="drop-card-desc">Réorientation et repositionnement industriel</span></div></a><a href="expertise-digital.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div><span class="drop-card-title">Digital &amp; Innovation</span><span class="drop-card-desc">Transformation numérique des opérations</span></div></a><a href="expertise-excellence.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div><span class="drop-card-title">Excellence Opérationnelle</span><span class="drop-card-desc">Lean, performance et amélioration continue</span></div></a><a href="expertise-supply-chain.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><div><span class="drop-card-title">Supply Chain</span><span class="drop-card-desc">Optimisation des flux et résilience</span></div></a><a href="expertise-rd.html" class="drop-card"><div class="drop-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v10l-4 5h14l-4-5V3"/><line x1="6" y1="7" x2="18" y2="7"/></svg></div><div><span class="drop-card-title">R&amp;D &amp; Innovation</span><span class="drop-card-desc">Accélération des cycles d'innovation</span></div></a></div></div></li>
@@ -362,11 +364,8 @@
       <div class="es-title">Stratégie Industrielle &amp; Restructuration</div>
       <div class="es-desc">Dans un environnement économique en constante mutation, les entreprises industrielles doivent relever des défis critiques pour rester compétitives. Nous allions rigueur financière, expertise opérationnelle et collaboration à tous les niveaux pour transformer les plans stratégiques en résultats concrets.</div>
       <div class="es-services">
-        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Schéma directeur &amp; Footprint industriel</span></div>
-        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Réduction &amp; Optimisation des coûts</span></div>
-        <div class="es-service"><span class="es-service-num">03</span><span class="es-service-name">Due diligence &amp; Post Merger Integration</span></div>
-        <div class="es-service"><span class="es-service-num">04</span><span class="es-service-name">Restructuration organisationnelle</span></div>
-        <div class="es-service"><span class="es-service-num">05</span><span class="es-service-name">Redéfinition des modèles industriels</span></div>
+        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Offre · Stratégie opérationnelle</span></div>
+        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Offre · Stratégie &amp; croissance</span></div>
       </div>
       <a class="es-link" href="expertise-strategie.html">Voir l'expertise <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
@@ -376,11 +375,8 @@
       <div class="es-title">Supply Chain</div>
       <div class="es-desc">La supply chain est au cœur de la performance des entreprises. OPEO accompagne la transformation des opérations logistiques et industrielles pour répondre aux défis de compétitivité, délais et flexibilité — avec une intervention directe sur le terrain, au plus près des équipes.</div>
       <div class="es-services">
-        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">S&amp;OP / Business Planning</span></div>
-        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Architecture &amp; optimisation des flux</span></div>
-        <div class="es-service"><span class="es-service-num">03</span><span class="es-service-name">Redressement OTD &amp; planification</span></div>
-        <div class="es-service"><span class="es-service-num">04</span><span class="es-service-name">Optimisation des stocks</span></div>
-        <div class="es-service"><span class="es-service-num">05</span><span class="es-service-name">Vision bout-en-bout de la chaîne</span></div>
+        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Offre · Aéronautique</span></div>
+        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Offre · Transformation de site</span></div>
       </div>
       <a class="es-link" href="expertise-supply-chain.html">Voir l'expertise <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
@@ -390,11 +386,8 @@
       <div class="es-title">Performance &amp; Excellence Opérationnelle</div>
       <div class="es-desc">La performance opérationnelle ne se décrète pas, elle se construit — dimension par dimension, équipe par équipe. OPEO agit sur les six leviers qui font la différence entre une amélioration ponctuelle et une transformation pérenne.</div>
       <div class="es-services">
-        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Standards opérationnels</span></div>
-        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Standards managériaux &amp; GEMBA</span></div>
-        <div class="es-service"><span class="es-service-num">03</span><span class="es-service-name">Développement des compétences</span></div>
-        <div class="es-service"><span class="es-service-num">04</span><span class="es-service-name">Organisation performante</span></div>
-        <div class="es-service"><span class="es-service-num">05</span><span class="es-service-name">Amélioration continue &amp; Lean</span></div>
+        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Offre · QRQC</span></div>
+        <div class="es-service"><span class="es-service-num">02</span><a class="es-service-name" href="offre-lean-augmente.html">Offre · Lean Augmenté</a></div>
       </div>
       <a class="es-link" href="expertise-excellence.html">Voir l'expertise <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
@@ -404,11 +397,7 @@
       <div class="es-title">Recherche &amp; Développement</div>
       <div class="es-desc">Dans un contexte de compétition accrue et d'accélération technologique, la R&amp;D est un levier stratégique majeur. OPEO accompagne les industriels dans la structuration et l'optimisation de leurs processus d'innovation pour réduire les délais et maximiser l'impact des investissements.</div>
       <div class="es-services">
-        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Structuration de l'organisation R&amp;D</span></div>
-        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Processus robustes &amp; jalons de projet</span></div>
-        <div class="es-service"><span class="es-service-num">03</span><span class="es-service-name">Pilotage de portefeuille</span></div>
-        <div class="es-service"><span class="es-service-num">04</span><span class="es-service-name">Accélération time-to-market</span></div>
-        <div class="es-service"><span class="es-service-num">05</span><span class="es-service-name">Intégration nouvelles technologies</span></div>
+        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Offre · Modèle opérationnel R&amp;D</span></div>
       </div>
       <a class="es-link" href="expertise-rd.html">Voir l'expertise <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
@@ -418,11 +407,8 @@
       <div class="es-title">Digital &amp; Data</div>
       <div class="es-desc">Le digital n'est pas une fin en soi — c'est un levier de performance opérationnelle. OPEO accompagne les industriels dans leurs transformations numériques avec une approche pragmatique, ancrée dans la réalité du terrain, pour générer des gains mesurables et durables.</div>
       <div class="es-services">
-        <div class="es-service"><span class="es-service-num">01</span><span class="es-service-name">Vision &amp; stratégie data / IA</span></div>
-        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Transformation data opérationnelle</span></div>
-        <div class="es-service"><span class="es-service-num">03</span><span class="es-service-name">Digital augmented operations</span></div>
-        <div class="es-service"><span class="es-service-num">04</span><span class="es-service-name">Industrie 4.0 &amp; IIoT</span></div>
-        <div class="es-service"><span class="es-service-num">05</span><span class="es-service-name">Autonomie &amp; montée en compétence</span></div>
+        <div class="es-service"><span class="es-service-num">01</span><a class="es-service-name" href="offre-lean-augmente.html">Offre · Lean Augmenté</a></div>
+        <div class="es-service"><span class="es-service-num">02</span><span class="es-service-name">Offre · Diagnostic IA</span></div>
       </div>
       <a class="es-link" href="expertise-digital.html">Voir l'expertise <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
@@ -468,7 +454,7 @@
 
 <footer class="footer"><div class="container">
   <div class="footer-grid">
-    <div class="footer-brand"><a href="index.html" class="nav-logo-link"><img src="assets/logos/logo-official.svg" class="nav-logo-img" alt="OPEO"/></a><p>Cabinet de Conseil européen spécialisé dans la transformation des opérations industrielles.</p><div class="footer-socials"><a href="https://www.linkedin.com/company/opeo/" target="_blank" class="soc-link">in</a><a href="https://www.youtube.com/channel/UCHxWDzGkSoEmFhDaU6nbsCg" target="_blank" class="soc-link">▶</a></div></div>
+    <div class="footer-brand"><a href="index.html" class="nav-logo-link"><img src="logo-official.svg" class="nav-logo-img" alt="OPEO"/></a><p>Cabinet de Conseil européen spécialisé dans la transformation des opérations industrielles.</p><div class="footer-socials"><a href="https://www.linkedin.com/company/opeo/" target="_blank" class="soc-link">in</a><a href="https://www.youtube.com/channel/UCHxWDzGkSoEmFhDaU6nbsCg" target="_blank" class="soc-link">▶</a></div></div>
     <div class="footer-col"><h4>Expertises</h4><ul class="footer-nav"><li><a href="expertise-strategie.html">Stratégie Industrielle</a></li><li><a href="expertise-supply-chain.html">Supply Chain</a></li><li><a href="expertise-excellence.html">Excellence Opérationnelle</a></li><li><a href="expertise-rd.html">R&amp;D</a></li><li><a href="expertise-digital.html">Digital &amp; Data</a></li></ul></div>
     <div class="footer-col"><h4>À propos</h4><ul class="footer-nav"><li><a href="a-propos.html">Mission</a></li><li><a href="transformation.html">Transformation</a></li><li><a href="carrieres.html">Carrières</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul class="footer-nav"><li><a href="contact.html">Nous contacter</a></li><li><a href="publications.html">Publications</a></li></ul></div>
